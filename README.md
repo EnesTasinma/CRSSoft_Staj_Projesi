@@ -26,34 +26,41 @@ Temel amaç, karmaşık hukuki süreçleri daha anlaşılır hale getirmek ve RA
     + Gelecekte API desteği ile güncel mevzuat entegrasyonu
 
 
-## Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
- **Backend**  Ben python bilmediğimden ötürü java ile yapmayı düşünüyorum. Ama Python'ın kullanım kolaylıklarından en büyüğü RAG istemi için popüler olan teknolojilerden biri olan llama_index kütüphanesini içerirken javada böyle bir kütüphane yok. Java'da "embedding, chunking veya vektör arama" işlemlerini kendimiz manuel yazmamız gerekir. Java da python kadar kolay bir şekilde embedding ve LLM entegrasyonu yapılamıyor. Ve nadir kullanıldığı için herhangi bir sorunla karşılaştığımızda form veya dökümaantaston eksikliği yaşanıyor.
+**Backend**   **C# (.NET Core / ASP.NET Web API)**  
+RESTful API ile kullanıcı olaylarını alır, embedding ve vektör arama yapar. Gerekirse dış LLM servisine bağlanır.  
+HTTPClient, JSON serialization, middleware yapısı kullanılır.
 
- **Frontend**  Streamlit (hızlı prototipleme): kullanıcı gelip direkt sorusunu sorduktan sonra cevabını öğrenip gider. İleride kalıcı veya daha geniş çaplı ürünler için react kullanılabilir.
+ **Frontend** , **React.js (Vite veya Create React App)**  
+Modern, hızlı ve kullanıcı dostu arayüz. Kullanıcı olaylarını yazar, sonuçları görüntüler.  
+TailwindCSS veya Material UI ile stil verilebilir.
 
- **Vector DB**  FAISS (offline): Kullanıcıdan gelen verileri chunklayıp vektörler hâlinde saklar. Gelen soruyu da çaklayıp en yakın vektörle cevap verir.
+ **LLM**       **OpenAI GPT-3.5 Turbo (API üzerinden)**  
+Senaryo bazlı bağlamlı cevaplar üretir. Prompt yapısı C# üzerinden REST çağrısıyla yönetilir.
 
- **LLM / RAG Servisi** | Python (Flask/FastAPI) | LangChain + FAISS + GPT-3.5
+ **Embedding**  **OpenAI text-embedding-ada-002**  
+Kullanıcı metni ve dava içerikleri embedlenir. .NET üzerinden doğrudan OpenAI embedding endpoint’ine bağlanılır.
 
- **Embedding**  OpenAI `text-embedding-ada-002`
+ **Vector DB**  **Qdrant (gRPC veya REST ile bağlanılır)**  
+Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur. .NET için [Qdrant gRPC SDK](https://github.com/qdrant/qdrant-client-dotnet) veya REST endpoint kullanılabilir.
 
- **LLM**  OpenAI GPT-3.5 Turbo (API üzerinden): Bağlamlı yanıt üretici.
+ **Veri İşleme**   
+- PDF parsing: **PdfPig** veya **iTextSharp** (.NET için PDF okuma)  
+- JSON işleme: **System.Text.Json**  
+- Text preprocessing: Normal C# string utils / regex / tokenizer
 
- **Veri İşleme**  LangChain, Pandas, PyMuPDF 
+ **Veri Formatları**   
+- **PDF**: Dava metinleri ve iddianameler  
+- **JSON**: Yasa maddeleri, karar özeti verisi  
+- **Markdown (opsiyonel)**: Açıklayıcı hukuk yorumları
 
- **Veri Formatları**  JSON, Markdown, PDF 
-
- **Yardımcı Kütüphaneler**  tiktoken, pydantic, dotenv, etc.
-
- **Python kullanımı**
- - langchain → text splitting, retrieval
-
- - faiss → vektör tabanlı arama
-
- - openai SDK → GPT-3.5 ile yanıt üretme
-
- - PyMuPDF veya pdfplumber → dava dosyası/iddianame PDF parsing
+ **Yardımcı Kütüphaneler (.NET)**   
+- `HttpClient` – API çağrıları için  
+- `Newtonsoft.Json` – JSON parsing  
+- `PdfPig` – PDF parsing  
+- `Qdrant.Client` – Vektör DB entegrasyonu  
+- `Swashbuckle` – Swagger dokümantasyonu  
 
 
 ##  Veri Kaynakları
