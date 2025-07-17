@@ -45,7 +45,7 @@ Temel amaç, karmaşık hukuki süreçleri daha anlaşılır hale getirmek ve RA
  **Veri Formatları**  JSON, Markdown, PDF 
 
  **Yardımcı Kütüphaneler**  tiktoken, pydantic, dotenv, etc.
- 
+
  **Python kullanımı**
  - langchain → text splitting, retrieval
 
@@ -59,32 +59,47 @@ Temel amaç, karmaşık hukuki süreçleri daha anlaşılır hale getirmek ve RA
 ##  Veri Kaynakları
 
  **Yargıtay Kararları**: kararara.yargitay.gov.tr üzerinden kamuya açık davalar
+
  **Türk Ceza Kanunu Maddeleri (TCK)**: mevzuat.gov.tr
+
  **CMK, TMK ve ilgili mevzuat** (Genişletilebilir)
+
  **Akademik yorum ve hukuk blog içerikleri** (isteğe bağlı)
+
 
 
 ## Sistem Akışı
 
 Kullanıcı Girişi (Frontend)
+
 ↓
+
 Spring Boot REST API (Java)
+
 ↓
+
 POST → Python LLM Servisi
+
 ↓
+
 Embedding + FAISS + Prompting
+
 ↓
+
 LLM → Yanıt oluşturur
+
 ↓
+
 Yanıt Java’ya döner → Kullanıcıya gösterilir
 
 **Kullanıcı Girdisi** “Bana küfür eden komşumu sinirle bıçakladım ve olay yerinde hayatını kaybetti. Ne olur?”
 
 **Python Rag Sistemi Yanıtı**
-Türk Ceza Kanunu Madde 81 (Kasten öldürme) kapsamında değerlendirilir.
 
-Ancak TCK 29’a göre “haksız tahrik” indirimi uygulanabilir.
++Türk Ceza Kanunu Madde 81 (Kasten öldürme) kapsamında değerlendirilir.
 
-Yargıtay 1. CD 2020/XXXX kararında benzer bir olayda ceza indirimi uygulanmış.
++Ancak TCK 29’a göre “haksız tahrik” indirimi uygulanabilir.
 
-Ceza: 12–18 yıl arası olabilir. Takdir hakimi inisiyatifindedir.
++Yargıtay 1. CD 2020/XXXX kararında benzer bir olayda ceza indirimi uygulanmış.
+
++Ceza: 12–18 yıl arası olabilir. Takdir hakimi inisiyatifindedir.
