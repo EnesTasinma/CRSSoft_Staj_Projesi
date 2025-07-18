@@ -77,8 +77,6 @@ Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur
 
 ## Sistem Akışı
 
-## ✅ Özet Akış
-
 1. Kullanıcı → Olay anlatımı → Backend  
 2. Backend → Embedding üretimi → Qdrant arama  
 3. Qdrant → İlgili içerikleri döner  
