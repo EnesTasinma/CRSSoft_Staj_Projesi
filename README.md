@@ -36,7 +36,7 @@ HTTPClient, JSON serialization, middleware yapısı kullanılır.
 Modern, hızlı ve kullanıcı dostu arayüz. Kullanıcı olaylarını yazar, sonuçları görüntüler.  
 TailwindCSS veya Material UI ile stil verilebilir.
 
- **LLM**       **Gemma 3B / 4B (Local)**  
+ **LLM**       **Gemma3:4B (Local)**  
 Senaryo bazlı bağlamlı cevaplar üretir. Yerel olarak çalışan bir LLM sunucusu (örn. Ollama, LM Studio) üzerinden HTTP API ile çağrılır. Prompt ve kullanıcı girdi yönetimi C# üzerinden yapılır.
 
  **Embedding**  **OpenAI text-embedding-ada-002**  
