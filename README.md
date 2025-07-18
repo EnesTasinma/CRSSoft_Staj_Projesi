@@ -77,27 +77,14 @@ Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur
 
 ## Sistem Akışı
 
-Kullanıcı Girişi (Frontend)
+## ✅ Özet Akış
 
-↓
-
-Spring Boot REST API (Java)
-
-↓
-
-POST → Python LLM Servisi
-
-↓
-
-Embedding + FAISS + Prompting
-
-↓
-
-LLM → Yanıt oluşturur
-
-↓
-
-Yanıt Java’ya döner → Kullanıcıya gösterilir
+1. Kullanıcı → Olay anlatımı → Backend  
+2. Backend → Embedding üretimi → Qdrant arama  
+3. Qdrant → İlgili içerikleri döner  
+4. Backend → LLM'e bağlamlı prompt gönderir  
+5. LLM → Yanıt üretir  
+6. Backend → Cevabı frontend'e döner → Kullanıcı sonucu görür  
 
 **Kullanıcı Girdisi** “Bana küfür eden komşumu sinirle bıçakladım ve olay yerinde hayatını kaybetti. Ne olur?”
 
