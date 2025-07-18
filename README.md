@@ -36,8 +36,8 @@ HTTPClient, JSON serialization, middleware yapısı kullanılır.
 Modern, hızlı ve kullanıcı dostu arayüz. Kullanıcı olaylarını yazar, sonuçları görüntüler.  
 TailwindCSS veya Material UI ile stil verilebilir.
 
- **LLM**       **OpenAI GPT-3.5 Turbo (API üzerinden)**  
-Senaryo bazlı bağlamlı cevaplar üretir. Prompt yapısı C# üzerinden REST çağrısıyla yönetilir.
+ **LLM**       **Gemma 3B / 4B (Local)**  
+Senaryo bazlı bağlamlı cevaplar üretir. Yerel olarak çalışan bir LLM sunucusu (örn. Ollama, LM Studio) üzerinden HTTP API ile çağrılır. Prompt ve kullanıcı girdi yönetimi C# üzerinden yapılır.
 
  **Embedding**  **OpenAI text-embedding-ada-002**  
 Kullanıcı metni ve dava içerikleri embedlenir. .NET üzerinden doğrudan OpenAI embedding endpoint’ine bağlanılır.
