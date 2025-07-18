@@ -74,7 +74,6 @@ Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur
  **Akademik yorum ve hukuk blog içerikleri** (isteğe bağlı)
 
 
-
 ## Sistem Akışı
 
 1. Kullanıcı → Olay anlatımı → Backend  
@@ -83,6 +82,8 @@ Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur
 4. Backend → LLM'e bağlamlı prompt gönderir  
 5. LLM → Yanıt üretir  
 6. Backend → Cevabı frontend'e döner → Kullanıcı sonucu görür  
+
+## Örnek kullanım
 
 **Kullanıcı Girdisi** “Bana küfür eden komşumu sinirle bıçakladım ve olay yerinde hayatını kaybetti. Ne olur?”
 
