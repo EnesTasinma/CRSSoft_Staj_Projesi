@@ -55,8 +55,7 @@ Sistemime uygun Ollama kurulum paketi resmî web sitesinden indirildi ve yüklen
 
 - Basit terminal tabanlı soru-cevap senaryosu
 
-
-# C# ve Semantic Kernel ile Test Uygulaması Geliştirme
+## C# ve Semantic Kernel ile Test Uygulaması Geliştirme
 
 MacBook üzerinde bir .NET projesi oluşturuldu. Amaç, temel bir soru-cevap etkileşimi sağlamaktı. Microsoft Semantic Kernel framework’ü kullanılarak LLM ile bağlantı sağlayacak bir chat yapısı kuruldu.
 
