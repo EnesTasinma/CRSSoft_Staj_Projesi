@@ -36,12 +36,12 @@ Sistemime uygun Ollama kurulum paketi resmî web sitesinden indirildi ve yüklen
 → Hayır. Her şey local olarak çalışıyor. Dış bağlantı yok.
 
 
-# Semantic Kernel + Ollama ile Lokal Soru-Cevap Uygulaması Geliştirme Süreci
+# 📄 Semantic Kernel + Ollama ile Lokal Soru-Cevap Uygulaması Geliştirme Süreci
 
 ## 📌 Geliştirme Ortamı
 - Kod Geliştirme: macOS (MacBook)
 
-- Model Sunucusu: Windows PC (Ollama üzerinde Gemma 3B)
+- Model Sunucusu: Windows PC (Ollama üzerinde Gemma3:4B)
 
 ### Kullanılan Teknolojiler:
 
@@ -51,12 +51,13 @@ Sistemime uygun Ollama kurulum paketi resmî web sitesinden indirildi ve yüklen
 
 - Ollama (Local LLM çalıştırmak için)
 
-- Gemma 3B (Ollama üzerinden indirilen model)
+- Gemma3:4B (Ollama üzerinden indirilen model)
 
 - Basit terminal tabanlı soru-cevap senaryosu
 
 
 ## C# ve Semantic Kernel ile Test Uygulaması Geliştirme
+
 MacBook üzerinde bir .NET projesi oluşturuldu. Amaç, temel bir soru-cevap etkileşimi sağlamaktı. Microsoft Semantic Kernel framework’ü kullanılarak LLM ile bağlantı sağlayacak bir chat yapısı kuruldu.
 
 ### Kod içinde şu adımlar yer aldı:
