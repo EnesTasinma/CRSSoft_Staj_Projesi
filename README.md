@@ -87,7 +87,7 @@ Vektörel olarak indekslenmiş yasa maddeleri ve dava içerikleri burada tutulur
 
 **Kullanıcı Girdisi** “Bana küfür eden komşumu sinirle bıçakladım ve olay yerinde hayatını kaybetti. Ne olur?”
 
-**Python Rag Sistemi Yanıtı**
+**Rag Sistemi Yanıtı**
 
 +Türk Ceza Kanunu Madde 81 (Kasten öldürme) kapsamında değerlendirilir.
 
