@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/enes/Desktop/GemmaChat/GemmaChat.csproj": {}
+    "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGProj/RAGProj.csproj": {}
   },
   "projects": {
-    "/Users/enes/Desktop/GemmaChat/GemmaChat.csproj": {
+    "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGProj/RAGProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/enes/Desktop/GemmaChat/GemmaChat.csproj",
-        "projectName": "GemmaChat",
-        "projectPath": "/Users/enes/Desktop/GemmaChat/GemmaChat.csproj",
+        "projectUniqueName": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGProj/RAGProj.csproj",
+        "projectName": "RAGProj",
+        "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGProj/RAGProj.csproj",
         "packagesPath": "/Users/enes/.nuget/packages/",
-        "outputPath": "/Users/enes/Desktop/GemmaChat/obj/",
+        "outputPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGProj/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/enes/.nuget/NuGet/NuGet.Config"
@@ -44,9 +44,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Newtonsoft.Json": {
+            "UglyToad.PdfPig": {
               "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[1.7.0-custom-5, )"
             }
           },
           "imports": [
