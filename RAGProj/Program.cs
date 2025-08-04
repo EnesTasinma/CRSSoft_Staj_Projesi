@@ -1,22 +1,41 @@
-﻿var ollamaUrl = "http://192.168.1.47:11434";
-var qdrantUrl = "http://192.168.1.47:7001";
-var collection = "kararlar";
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using Services;
 
-var embeddingService = new EmbeddingService(ollamaUrl);
-var qdrantService = new QdrantService(qdrantUrl, collection);
-
-foreach (var file in Directory.GetFiles("PDFs", "*.pdf"))
+class Program
 {
-    Console.WriteLine($"İşleniyor: {file}");
-    var rawText = PdfProcessor.ExtractTextFromPdf(file);
-    var chunks = TextChunker.ChunkText(rawText);
-
-    int i = 0;
-    foreach (var chunk in chunks)
+    static async Task Main(string[] args)
     {
-        var embedding = await embeddingService.GetEmbeddingAsync(chunk);
-        var id = $"{Path.GetFileNameWithoutExtension(file)}_{i++}";
-        await qdrantService.UploadEmbeddingAsync(id, embedding, chunk);
-        Console.WriteLine($"Yüklendi: {id}");
+        var ollamaUrl = "http://192.168.1.47:11434";
+        var qdrantUrl = "http://192.168.1.47:7000";
+        var collection = "kararlar";
+
+        var embeddingService = new EmbeddingService(ollamaUrl);
+        var qdrantService = new QdrantService(qdrantUrl, collection);
+
+        await qdrantService.CreateCollectionAsync();
+
+        int globalId = 0;
+
+        foreach (var file in Directory.GetFiles("TXTs", "*.txt"))
+        {
+            Console.WriteLine($"İşleniyor: {file}");
+            var rawText = TxtProcessor.ExtractTextFromTxt(file);
+            var chunks = TextChunker.ChunkText(rawText);
+
+            foreach (var chunk in chunks)
+            {
+                if (string.IsNullOrWhiteSpace(chunk))
+                    continue;
+
+                var embedding = await embeddingService.GetEmbeddingAsync(chunk);
+                await qdrantService.UploadEmbeddingAsync(globalId, embedding, chunk);
+                Console.WriteLine($"✅ Yüklendi: {globalId}");
+                globalId++;
+            }
+        }
+
+        Console.WriteLine("🚀 Tüm embedding'ler başarıyla yüklendi.");
     }
 }

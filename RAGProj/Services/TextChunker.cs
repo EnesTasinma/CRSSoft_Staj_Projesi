@@ -4,7 +4,7 @@ namespace Services
 {
     public class TextChunker
 {
-    public static List<string> ChunkText(string text, int maxChunkSize = 1000)
+    public static List<string> ChunkText(string text, int maxChunkSize = 300)
     {
         var chunks = new List<string>();
         var words = text.Split(' ');

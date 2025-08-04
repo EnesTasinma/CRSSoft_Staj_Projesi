@@ -1,0 +1,15 @@
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/bin/Debug/net9.0/ChatRAG
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/bin/Debug/net9.0/ChatRAG.deps.json
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/bin/Debug/net9.0/ChatRAG.runtimeconfig.json
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/bin/Debug/net9.0/ChatRAG.dll
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/bin/Debug/net9.0/ChatRAG.pdb
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.AssemblyInfoInputs.cache
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.AssemblyInfo.cs
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.csproj.CoreCompileInputs.cache
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.sourcelink.json
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.dll
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/refint/ChatRAG.dll
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.pdb
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ChatRAG.genruntimeconfig.cache
+/Users/enes/Desktop/CRSSoft_Staj_Projesi/ChatRAG/obj/Debug/net9.0/ref/ChatRAG.dll

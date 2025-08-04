@@ -2,6 +2,6 @@ namespace Models
 {
     public class OllamaEmbeddingResponse
     {
-        public List<float[]> embeddings { get; set; }
+        public float[] embedding { get; set; } = Array.Empty<float>();
     }
 }
