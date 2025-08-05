@@ -13,24 +13,31 @@ namespace RAGPipeline
 
         public async Task<LegalClassification> ClassifyAsync(string userInput)
         {
-            var systemPrompt = @"
-Kullanıcının olay anlatımını analiz et ve sadece aşağıdaki JSON formatında yanıt ver:
+            var systemPrompt = @"Sen bir hukuk sınıflandırma asistanısın. 
+            Kullanıcının verdiği olayın hangi suç türüne girdiğini analiz et ve aşağıdaki suç türlerinden uygun olanları seç:
 
-{
-  ""suç_türü"": [""kasten öldürme"", ""haksız tahrik""],
-  ""ceza_türü"": ""hapis"",
-  ""ceza_aralığı_yıl"": {
-    ""min"": 15,
-    ""max"": 20
-  },
-  ""tahrik"": true,
-  ""iyi_hal"": false,
-  ""meşru_müdafaa"": false,
-  ""teşebbüs"": false,
-  ""ek_not"": ""Olayda saldırganın davranışı tahrik olarak değerlendirilebilir.""
-}
+            - Kasten öldürme
+            - Kasten yaralama
+            - Dolandırıcılık
+            - Hırsızlık
+            - Cinsel saldırı
 
-Açıklama ekleme. Sadece JSON döndür.";
+            Aşağıdaki JSON formatında, sadece veri olacak şekilde cevap ver:
+
+            {
+            ""suç_türü"": [""...""],
+            ""ceza_türü"": ""..."",
+            ""ceza_aralığı_yıl"": {
+                ""min"": 0,
+                ""max"": 0
+            },
+            ""tahrik"": false,
+            ""iyi_hal"": false,
+            ""meşru_müdafaa"": false,
+            ""teşebbüs"": false,
+            ""ek_not"": ""...""
+            }";
+
 
             var classificationPrompt = $"Olay: {userInput}";
 
@@ -51,7 +58,7 @@ Açıklama ekleme. Sadece JSON döndür.";
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.102:11434/api/chat", content);
+                var response = await _client.PostAsync("http://192.168.1.103:11434/api/chat", content);
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();

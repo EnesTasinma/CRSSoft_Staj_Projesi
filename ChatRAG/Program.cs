@@ -27,10 +27,11 @@ namespace RAGPipeline
             if (classification.Suclar.Count == 0 || classification.Suclar.Contains("belirsiz"))
             {
                 Console.WriteLine("⚠️ Hukuki sınıflandırma yapılamadı.");
+                combinedQuery = question;
             }
             else
             {
-                combinedQuery = string.Join(" ve ", classification.Suclar) + " ile ilgili Yargıtay kararları";
+                combinedQuery = string.Join(" ", classification.Suclar);
                 Console.WriteLine($"🔎 Arama ifadesi: {combinedQuery}");
             }
 
@@ -43,6 +44,18 @@ namespace RAGPipeline
             // 4. Qdrant'tan karar çek
             var qdrant = new QdrantService();
             var context = await qdrant.Search(embedding);
+            Console.WriteLine("🎯 Qdrant'tan gelen context:\n" + context);
+
+            if (string.IsNullOrWhiteSpace(context))
+            {
+                Console.WriteLine("⚠️ Qdrant sonuç döndüremedi. Sorgu ile veri eşleşmiyor.");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("🎯 Qdrant sonuçları bulundu:\n" + context);
+            }
+
 
             // 5. LLM ile cevap üret
             var llm = new OllamaService();

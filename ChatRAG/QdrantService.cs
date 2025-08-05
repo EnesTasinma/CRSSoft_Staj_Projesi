@@ -27,7 +27,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.102:7000/collections/kararlar/points/search", content);
+                var response = await _client.PostAsync("http://192.168.1.103:7000/collections/kararlar/points/search", content);
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();

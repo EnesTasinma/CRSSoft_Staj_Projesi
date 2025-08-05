@@ -23,7 +23,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.102:11434/api/embeddings", content);
+                var response = await _client.PostAsync("http://192.168.1.103:11434/api/embeddings", content);
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
