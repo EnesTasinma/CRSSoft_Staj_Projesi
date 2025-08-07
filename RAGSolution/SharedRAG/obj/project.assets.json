@@ -1633,11 +1633,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj",
+      "projectUniqueName": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj",
       "projectName": "SharedRAG",
-      "projectPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj",
+      "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj",
       "packagesPath": "/Users/enes/.nuget/packages/",
-      "outputPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/obj/",
+      "outputPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/enes/.nuget/NuGet/NuGet.Config"

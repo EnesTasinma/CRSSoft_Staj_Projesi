@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/enes/Desktop/RAGSolution/SeederApp/SeederApp.csproj": {}
+    "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/SeederApp.csproj": {}
   },
   "projects": {
-    "/Users/enes/Desktop/RAGSolution/SeederApp/SeederApp.csproj": {
+    "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/SeederApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/enes/Desktop/RAGSolution/SeederApp/SeederApp.csproj",
+        "projectUniqueName": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/SeederApp.csproj",
         "projectName": "SeederApp",
-        "projectPath": "/Users/enes/Desktop/RAGSolution/SeederApp/SeederApp.csproj",
+        "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/SeederApp.csproj",
         "packagesPath": "/Users/enes/.nuget/packages/",
-        "outputPath": "/Users/enes/Desktop/RAGSolution/SeederApp/obj/",
+        "outputPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/enes/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj": {
-                "projectPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj"
+              "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj": {
+                "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj": {
+    "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj",
+        "projectUniqueName": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj",
         "projectName": "SharedRAG",
-        "projectPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj",
+        "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj",
         "packagesPath": "/Users/enes/.nuget/packages/",
-        "outputPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/obj/",
+        "outputPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/enes/.nuget/NuGet/NuGet.Config"

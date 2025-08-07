@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeederApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c91e6ffbaca85d2220199594487d1d3702c5879")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeederApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeederApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

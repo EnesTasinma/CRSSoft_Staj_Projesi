@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GAdtWMTAtZE=",
+  "dgSpecHash": "vSmlHUj5qv8=",
   "success": true,
-  "projectFilePath": "/Users/enes/Desktop/RAGSolution/SeederApp/SeederApp.csproj",
+  "projectFilePath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SeederApp/SeederApp.csproj",
   "expectedPackageFiles": [
     "/Users/enes/.nuget/packages/azure.ai.openai/2.2.0-beta.5/azure.ai.openai.2.2.0-beta.5.nupkg.sha512",
     "/Users/enes/.nuget/packages/azure.core/1.47.0/azure.core.1.47.0.nupkg.sha512",

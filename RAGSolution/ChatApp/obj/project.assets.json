@@ -1654,11 +1654,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/enes/Desktop/RAGSolution/ChatApp/ChatApp.csproj",
+      "projectUniqueName": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/ChatApp/ChatApp.csproj",
       "projectName": "ChatApp",
-      "projectPath": "/Users/enes/Desktop/RAGSolution/ChatApp/ChatApp.csproj",
+      "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/ChatApp/ChatApp.csproj",
       "packagesPath": "/Users/enes/.nuget/packages/",
-      "outputPath": "/Users/enes/Desktop/RAGSolution/ChatApp/obj/",
+      "outputPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/ChatApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/enes/.nuget/NuGet/NuGet.Config"
@@ -1673,8 +1673,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj": {
-              "projectPath": "/Users/enes/Desktop/RAGSolution/SharedRAG/SharedRAG.csproj"
+            "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj": {
+              "projectPath": "/Users/enes/Desktop/CRSSoft_Staj_Projesi/RAGSolution/SharedRAG/SharedRAG.csproj"
             }
           }
         }
