@@ -6,46 +6,46 @@ namespace RAGPipeline.Models
     public class LegalClassification
     {
         [JsonPropertyName("suç_türü")]
-        public List<string> Suclar { get; set; }
+        public List<string> Crimes { get; set; }
 
         [JsonPropertyName("ceza_türü")]
-        public string CezaTuru { get; set; }
+        public string PenaltyType { get; set; }
 
         [JsonPropertyName("ceza_aralığı_yıl")]
-        public CezaAraligi CezaAraligi { get; set; }
+        public PenaltyRange PenaltyRange { get; set; }
 
         [JsonPropertyName("tahrik")]
-        public bool Tahrik { get; set; }
+        public bool Provocation { get; set; }
 
         [JsonPropertyName("iyi_hal")]
-        public bool IyiHal { get; set; }
+        public bool GoodBehavior { get; set; }
 
         [JsonPropertyName("meşru_müdafaa")]
-        public bool MesruMudafaa { get; set; }
+        public bool SelfDefense { get; set; }
 
         [JsonPropertyName("teşebbüs")]
-        public bool Tesebbus { get; set; }
+        public bool Attempt { get; set; }
 
         [JsonPropertyName("ek_not")]
-        public string EkNot { get; set; }
+        public string AdditionalNote { get; set; }
 
         public void Normalize()
         {
-            if (string.IsNullOrWhiteSpace(CezaTuru))
-                CezaTuru = "bilinmiyor";
+            if (string.IsNullOrWhiteSpace(PenaltyType))
+                PenaltyType = "bilinmiyor";
 
-            if (Suclar == null || Suclar.Count == 0 || string.IsNullOrWhiteSpace(Suclar[0]))
-                Suclar = new List<string> { "belirsiz" };
+            if (Crimes == null || Crimes.Count == 0 || string.IsNullOrWhiteSpace(Crimes[0]))
+                Crimes = new List<string> { "belirsiz" };
 
-            if (CezaAraligi == null)
-                CezaAraligi = new CezaAraligi { Min = 0, Max = 0 };
+            if (PenaltyRange == null)
+                PenaltyRange = new PenaltyRange { Min = 0, Max = 0 };
 
-            if (string.IsNullOrWhiteSpace(EkNot))
-                EkNot = "Değerlendirme yapılamadı.";
+            if (string.IsNullOrWhiteSpace(AdditionalNote))
+                AdditionalNote = "Değerlendirme yapılamadı.";
         }
     }
 
-    public class CezaAraligi
+    public class PenaltyRange
     {
         [JsonPropertyName("min")]
         public int Min { get; set; }

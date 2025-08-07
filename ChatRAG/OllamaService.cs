@@ -58,7 +58,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.103:11434/api/chat", content);
+                var response = await _client.PostAsync("http://192.168.137.182:11434/api/chat", content);
                 response.EnsureSuccessStatusCode();
 
                 var stream = await response.Content.ReadAsStreamAsync();
@@ -88,7 +88,7 @@ namespace RAGPipeline
                 }
 
                 string fullResponse = fullResponseBuilder.ToString();
-                Console.WriteLine("\n📤 Tam birleştirilmiş LLM cevabı:\n" + fullResponse);
+                //Console.WriteLine("\n📤 Tam birleştirilmiş LLM cevabı:\n" + fullResponse);
 
                 _messages.Add(new { role = "assistant", content = fullResponse });
             }

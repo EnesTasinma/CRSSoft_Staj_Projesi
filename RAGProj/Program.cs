@@ -7,8 +7,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var ollamaUrl = "http://192.168.1.103:11434";
-        var qdrantUrl = "http://192.168.1.103:7000";
+        var ollamaUrl = "http://192.168.137.182:11434";
+        var qdrantUrl = "http://192.168.137.182:7000";
         var collection = "kararlar";
 
         var embeddingService = new EmbeddingService(ollamaUrl);

@@ -1,0 +1,5 @@
+/Users/enes/Desktop/RAGSolution/SharedRAG/obj/Debug/net9.0/SharedRAG.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enes/Desktop/RAGSolution/SharedRAG/obj/Debug/net9.0/SharedRAG.AssemblyInfoInputs.cache
+/Users/enes/Desktop/RAGSolution/SharedRAG/obj/Debug/net9.0/SharedRAG.AssemblyInfo.cs
+/Users/enes/Desktop/RAGSolution/SharedRAG/obj/Debug/net9.0/SharedRAG.csproj.CoreCompileInputs.cache
+/Users/enes/Desktop/RAGSolution/SharedRAG/obj/Debug/net9.0/SharedRAG.csproj.AssemblyReference.cache

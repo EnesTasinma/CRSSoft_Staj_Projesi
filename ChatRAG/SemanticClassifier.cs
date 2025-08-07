@@ -25,17 +25,17 @@ namespace RAGPipeline
             Aşağıdaki JSON formatında, sadece veri olacak şekilde cevap ver:
 
             {
-            ""suç_türü"": [""...""],
-            ""ceza_türü"": ""..."",
+            ""suç_türü"": string[],
+            ""ceza_türü"": string[],
             ""ceza_aralığı_yıl"": {
-                ""min"": 0,
-                ""max"": 0
+                ""min"": int,
+                ""max"": int
             },
-            ""tahrik"": false,
-            ""iyi_hal"": false,
-            ""meşru_müdafaa"": false,
-            ""teşebbüs"": false,
-            ""ek_not"": ""...""
+            ""tahrik"": bool,
+            ""iyi_hal"": bool,
+            ""meşru_müdafaa"": bool,
+            ""teşebbüs"": bool,
+            ""ek_not"": string[]
             }";
 
 
@@ -58,7 +58,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.103:11434/api/chat", content);
+                var response = await _client.PostAsync("http://192.168.137.182:11434/api/chat", content);
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
@@ -93,7 +93,8 @@ namespace RAGPipeline
 
         private string ExtractJsonBlock(string input)
         {
-            // Markdown işaretlemelerini temizle
+
+            
             input = input.Replace("```json", "").Replace("```", "").Trim();
 
             int start = input.IndexOf('{');
@@ -110,14 +111,14 @@ namespace RAGPipeline
         {
             return new LegalClassification
             {
-                Suclar = new List<string> { "belirsiz" },
-                CezaTuru = "bilinmiyor",
-                CezaAraligi = new CezaAraligi { Min = 0, Max = 0 },
-                Tahrik = false,
-                IyiHal = false,
-                MesruMudafaa = false,
-                Tesebbus = false,
-                EkNot = "Değerlendirme yapılamadı."
+                Crimes = new List<string> { "belirsiz" },
+                PenaltyType = "bilinmiyor",
+                PenaltyRange = new PenaltyRange { Min = 0, Max = 0 },
+                Provocation = false,
+                GoodBehavior = false,
+                SelfDefense = false,
+                Attempt = false,
+                AdditionalNote = "Değerlendirme yapılamadı."
             };
         }
     }

@@ -16,22 +16,22 @@ namespace RAGPipeline
             var classifier = new SemanticClassifier();
             var classification = await classifier.ClassifyAsync(question);
 
-            Console.WriteLine("\n🧠 Tespit edilen sınıflar:");
-            classification.Suclar.ForEach(c => Console.WriteLine($"- {c}"));
-            Console.WriteLine($"Ceza Türü: {classification.CezaTuru}");
-            Console.WriteLine($"Ceza Aralığı: {classification.CezaAraligi.Min} - {classification.CezaAraligi.Max} yıl");
-            Console.WriteLine($"Ek Not: {classification.EkNot}");
+            //Console.WriteLine("\n🧠 Tespit edilen sınıflar:");
+            //classification.Crimes.ForEach(c => Console.WriteLine($"- {c}"));
+            //Console.WriteLine($"Ceza Türü: {classification.PenaltyType}");
+            //Console.WriteLine($"Ceza Aralığı: {classification.PenaltyRange.Min} - {classification.PenaltyRange.Max} yıl");
+            //Console.WriteLine($"Ek Not: {classification.AdditionalNote}");
 
             String combinedQuery = "";
             // 2. Bu sınıfları tek cümle haline getir
-            if (classification.Suclar.Count == 0 || classification.Suclar.Contains("belirsiz"))
+            if (classification.Crimes.Count == 0 || classification.Crimes.Contains("belirsiz"))
             {
                 Console.WriteLine("⚠️ Hukuki sınıflandırma yapılamadı.");
                 combinedQuery = question;
             }
             else
             {
-                combinedQuery = string.Join(" ", classification.Suclar);
+                combinedQuery = string.Join(" ", classification.Crimes);
                 Console.WriteLine($"🔎 Arama ifadesi: {combinedQuery}");
             }
 
@@ -44,8 +44,6 @@ namespace RAGPipeline
             // 4. Qdrant'tan karar çek
             var qdrant = new QdrantService();
             var context = await qdrant.Search(embedding);
-            Console.WriteLine("🎯 Qdrant'tan gelen context:\n" + context);
-
             if (string.IsNullOrWhiteSpace(context))
             {
                 Console.WriteLine("⚠️ Qdrant sonuç döndüremedi. Sorgu ile veri eşleşmiyor.");
