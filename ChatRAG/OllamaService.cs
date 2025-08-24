@@ -58,7 +58,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.137.182:11434/api/chat", content);
+                var response = await _client.PostAsync("http://192.168.1.4:11434/api/chat", content);
                 response.EnsureSuccessStatusCode();
 
                 var stream = await response.Content.ReadAsStreamAsync();

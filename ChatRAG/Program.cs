@@ -26,7 +26,7 @@ namespace RAGPipeline
             // 2. Bu sınıfları tek cümle haline getir
             if (classification.Crimes.Count == 0 || classification.Crimes.Contains("belirsiz"))
             {
-                Console.WriteLine("⚠️ Hukuki sınıflandırma yapılamadı.");
+                Console.WriteLine("⚠️ Hukuki Sınıflandırma Yapılamadı!");
                 combinedQuery = question;
             }
             else
