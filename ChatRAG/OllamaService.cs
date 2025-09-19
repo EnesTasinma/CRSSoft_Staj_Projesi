@@ -50,7 +50,7 @@ namespace RAGPipeline
             {
                 model = "gemma3:4b",
                 messages = _messages,
-                stream = true  // streaming modda parça parça gelecek
+                stream = true 
             };
 
             string json = JsonSerializer.Serialize(requestBody);
@@ -58,7 +58,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.4:11434/api/chat", content);
+                var response = await _client.PostAsync("http://10.10.20.62:11434/api/chat", content);
                 response.EnsureSuccessStatusCode();
 
                 var stream = await response.Content.ReadAsStreamAsync();

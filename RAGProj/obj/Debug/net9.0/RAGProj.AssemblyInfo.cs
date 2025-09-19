@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RAGProj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+585a488f9473962e4494de493ebb33f8432c821d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ff32e5c31e1a519349bc2021a82184135c2566c")]
 [assembly: System.Reflection.AssemblyProductAttribute("RAGProj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RAGProj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

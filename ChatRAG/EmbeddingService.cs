@@ -10,6 +10,7 @@ namespace RAGPipeline
     {
         private readonly HttpClient _client = new();
 
+        //BUNU ARAŞTIR async sync task promise
         public async Task<float[]> GetEmbedding(string text)
         {
             var requestBody = new
@@ -23,7 +24,7 @@ namespace RAGPipeline
 
             try
             {
-                var response = await _client.PostAsync("http://192.168.1.4:11434/api/embeddings", content);
+                var response = await _client.PostAsync("http://10.10.20.62/api/embeddings", content);
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
